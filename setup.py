@@ -18,7 +18,7 @@ URL = 'https://github.com/calvin620707/soocii-cli'
 EMAIL = 'calvin.wu@soocii.me'
 AUTHOR = 'Calvin Wu'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -104,7 +104,7 @@ setup(
     url=URL,
     packages=find_packages(exclude=('tests',)),
     entry_points={
-        'console_scripts': ['soocii=cli:main'],
+        'console_scripts': ['soocii=app.cli:main'],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
