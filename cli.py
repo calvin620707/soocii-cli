@@ -1,6 +1,8 @@
 import fire
 
 class ElasticCache:
+    """ElasticCache utils"""
+
     db_map = {
         'Jarvis Celery': 0,
         'Jarvis Game history': 1,
@@ -19,7 +21,9 @@ class ElasticCache:
         'Vision/Thor Cache': 14,
         'Vision Celery': 15,
     }
+
     def db(self, name):
+        """Search Redis DB number by service name"""
         match = filter(lambda x: name.lower() in x.lower(), [k for k in self.db_map])
         return [f'{m}: {self.db_map[m]}' for m in match]
 
